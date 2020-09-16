@@ -1,5 +1,8 @@
 # Magento 2.4
 
+## Installation
+
+
 1 - Install Composer
 
 2 - Install Java
