@@ -7,7 +7,7 @@
 5 - Find validateURLScheme function in vendor\magento\framework\Image\Adapter\Gd2.php file. at line 96. Replace function with this:
 
 ### Private function validateURLScheme (string $filename): bool
-
+```
   {
       $allowed_schemes = ['ftp', 'ftps', 'http', 'https'];
       $url = parse_url($filename);
@@ -16,12 +16,12 @@
       }
       return true;
   }
-  
+```
   
 6 - Find me function in /vendor/magento/framework/View/Element/Template/File/Validator.php:113. Replace function with this:
 
 ### Protected function isPathInDirectories($path, $directories)
-
+```
     {
         $realPath = str_replace('\\', '/', $this->fileDriver->getRealPath($path));
         if (!is_array($directories)) {
@@ -34,7 +34,7 @@
         }
         return false;
     }
-
+```
 
 ### Command line:
 1 - php bin/magento setup:install --base-url="http://localhost/magento" --db-host="localhost" --db-name="magento2" --db-user="root" --db-password="root" --admin-firstname="root" --admin-lastname="root" --admin-email="alanfelipealiske@gmail.com" --admin-user="root" --admin-password="r00tr00t" --use-rewrites="1" --backend-frontname="magento"
