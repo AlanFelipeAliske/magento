@@ -1,10 +1,10 @@
 # Magento 2.4
 
-1 - Install Composer
-2 - Install Java
-3 - install Elasticsearch e run and test 
-4 - install Magento (composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4 magento / or download Archive (zip/tar))
-5 - Find validateURLScheme function in vendor\magento\framework\Image\Adapter\Gd2.php file. at line 96. Replace function with this:
+1 - Install Composer.
+2 - Install Java.
+3 - install Elasticsearch e run and test. 
+4 - install Magento (composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.4 magento / or download Archive (zip/tar)).
+5 - Find validateURLScheme function in vendor\magento\framework\Image\Adapter\Gd2.php file. at line 96. Replace function with this:.
 
 ### Private function validateURLScheme (string $filename): bool
 ```
@@ -43,10 +43,5 @@
 4 - php bin/magento setup:static-content:deploy -f
 5 - php bin/magento cache:flush
 6 - php bin/magento module:disable Magento_TwoFactorAuth
-
-
-
-
-
 
 
